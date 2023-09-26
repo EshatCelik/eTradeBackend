@@ -13,7 +13,7 @@ namespace eTradeBackend.Application.Services
         Task<CreateUserResponse> CreateUserAsync(CreateUserDto model);
         Task UpdateRefreshTokenAsync(AppUser user, string refreshToken, DateTime accessTokenTime, int addOnAccessTokenDateTime);
         Task UpdatePosswordAsync(string userId, string resetToken, string newPassword);
-        Task<List<ListUser>> GetAllUserAsync(int page, int pageSize);
+        Task<List<ListUser>> GetAllUsersAsync(int page, int pageSize);
         public int TotalUsersCount { get; }
         Task AssignRoleToUserAsync(string userId, string[] roles);
         Task<List<string>> GetRolesToUserAsync(string userIdOrName);
