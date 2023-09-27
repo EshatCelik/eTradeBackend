@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Application.Features.Commands.Basket.RemoveItemToBasket
 {
-    internal class RemoveItemToBasketCommandResponse
+    public class RemoveItemToBasketCommandResponse
     {
     }
 }

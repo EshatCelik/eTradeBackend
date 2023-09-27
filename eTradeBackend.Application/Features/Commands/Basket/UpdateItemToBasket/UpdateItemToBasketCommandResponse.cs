@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Application.Features.Commands.Basket.UpdateItemToBasket
 {
-    internal class UpdateItemToBasketCommandResponse
+    public class UpdateItemToBasketCommandResponse
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Application.Features.Commands.Order.CreateOrder
 {
-    internal class CreateOrderCommandResponse
+    public class CreateOrderCommandResponse
     {
     }
 }
