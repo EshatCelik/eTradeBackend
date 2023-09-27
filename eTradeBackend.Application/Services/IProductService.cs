@@ -9,8 +9,8 @@ namespace eTradeBackend.Application.Services
 {
     public interface IProductService
     {
-        Task<ProductListDto> GetProductList(int page, int pageSize);
-        Task<ProductListByQueryDto> GetProductListByQuery(int page, int pageSize, string? query);
+        ProductListDto GetProductList(int page, int pageSize);
+        ProductListByQueryDto GetProductListByQuery(int page, int pageSize, string? query);
         Task<byte[]> QRCodeToProductAsync(string productId);
     }
 }

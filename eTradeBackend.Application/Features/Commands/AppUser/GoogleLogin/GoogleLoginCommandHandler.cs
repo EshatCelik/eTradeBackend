@@ -20,7 +20,7 @@ namespace eTradeBackend.Application.Features.Commands.AppUser.GoogleLogin
         public async Task<GoogleLoginV2CommandResponse> Handle(GoogleLoginV2CommandRequest request, CancellationToken cancellationToken)
         {
             var token = await _authService.GoogleLoginAsync(request.IdToken);
-            return new()
+            return new() { Token = token };
         }
     }
 }

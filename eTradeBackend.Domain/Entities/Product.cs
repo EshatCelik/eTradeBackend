@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Domain.Entities
 {
-    public class Product:BaseEntity
+    public class Product : BaseEntity
     {
         public string Name { get; set; }
         public int Stock { get; set; }
         public float Price { get; set; }
-        public ICollection<ProductImageFile> ProdcutImageFile { get; set; }
+        public ICollection<ProductImageFile> ProductImageFiles { get; set; }
         public ICollection<BasketItem> BasketItem { get; set; }
     }
 }

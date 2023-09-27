@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Domain.Entities
 {
-    public class ProductImageFile:BaseEntity
+    public class ProductImageFile:File
     {
         public bool ShowCase { get; set; }
         public ICollection<Product> Products { get; set; }
