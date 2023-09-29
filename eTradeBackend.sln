@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTradeBackend.WebAPI", "eTradeBackend.WebAPI\eTradeBackend.WebAPI.csproj", "{DD06E5EA-EB4D-4C86-8DF6-A250C2312541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTradeBackend.WebAPI", "eTradeBackend.WebAPI\eTradeBackend.WebAPI.csproj", "{DD06E5EA-EB4D-4C86-8DF6-A250C2312541}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3D4B04E0-4654-47E3-AB0A-C61BD6BC4EE6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{10575C29-505D-4A5E-9B7F-64F9D2C0ED7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTradeBackend.Application", "eTradeBackend.Application\eTradeBackend.Application.csproj", "{423C5487-8CA3-45A8-A3D0-BFE41B08B8CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTradeBackend.Application", "eTradeBackend.Application\eTradeBackend.Application.csproj", "{423C5487-8CA3-45A8-A3D0-BFE41B08B8CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTradeBackend.Domain", "eTradeBackend.Domain\eTradeBackend.Domain.csproj", "{F407A781-235F-4579-8AD0-AF7286DD5226}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTradeBackend.Domain", "eTradeBackend.Domain\eTradeBackend.Domain.csproj", "{F407A781-235F-4579-8AD0-AF7286DD5226}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

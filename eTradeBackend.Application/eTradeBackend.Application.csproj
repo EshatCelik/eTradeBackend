@@ -17,5 +17,9 @@
   <ItemGroup>
     <ProjectReference Include="..\eTradeBackend.Domain\eTradeBackend.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\Storage\Azure\" />
+    <Folder Include="Abstract\Storage\LocalStorage\" />
+  </ItemGroup>
 
 </Project>
