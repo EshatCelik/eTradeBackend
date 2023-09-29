@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTradeBackend.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eTradeBackend.Domain", "eTradeBackend.Domain\eTradeBackend.Domain.csproj", "{F407A781-235F-4579-8AD0-AF7286DD5226}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTradeBackend.Infrastructure", "eTradeBackend.Infrastructure\eTradeBackend.Infrastructure.csproj", "{B2EB78DB-99CF-4DF5-9586-52019D957666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{F407A781-235F-4579-8AD0-AF7286DD5226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F407A781-235F-4579-8AD0-AF7286DD5226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F407A781-235F-4579-8AD0-AF7286DD5226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2EB78DB-99CF-4DF5-9586-52019D957666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2EB78DB-99CF-4DF5-9586-52019D957666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2EB78DB-99CF-4DF5-9586-52019D957666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2EB78DB-99CF-4DF5-9586-52019D957666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{423C5487-8CA3-45A8-A3D0-BFE41B08B8CE} = {3D4B04E0-4654-47E3-AB0A-C61BD6BC4EE6}
 		{F407A781-235F-4579-8AD0-AF7286DD5226} = {3D4B04E0-4654-47E3-AB0A-C61BD6BC4EE6}
+		{B2EB78DB-99CF-4DF5-9586-52019D957666} = {10575C29-505D-4A5E-9B7F-64F9D2C0ED7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E7B812F-3D94-4C72-ACB1-5A9B236288BE}
