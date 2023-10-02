@@ -1,4 +1,5 @@
-﻿using eTradeBackend.Domain.Entities;
+﻿using eTradeBackend.Application.DTOs.Configurations;
+using eTradeBackend.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace eTradeBackend.Application.Services.Configuration
 {
     public interface IApplicationService
     {
-        List<Menu> GetAuthorizationDefinitionEndpoints(Type type);
+        List<MenuDto> GetAuthorizationDefinitionEndpoints(Type type);
     }
 }
