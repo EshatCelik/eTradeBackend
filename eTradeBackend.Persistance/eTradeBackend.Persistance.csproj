@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eTradeBackend.Application\eTradeBackend.Application.csproj" />
     <ProjectReference Include="..\eTradeBackend.Domain\eTradeBackend.Domain.csproj" />
   </ItemGroup>
 

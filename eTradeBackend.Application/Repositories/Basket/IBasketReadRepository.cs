@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Application.Repositories.Basket
 {
-    public interface IBasketItemReadRepository : IReadRepository<Domain.Entities.Basket>
+    public interface IBasketRepository : IReadRepository<Domain.Entities.Basket>
     {
     }
 }

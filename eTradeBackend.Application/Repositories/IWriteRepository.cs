@@ -9,12 +9,12 @@ namespace eTradeBackend.Application.Repositories
 {
     public interface IWriteRepository<T> : IRepository<T> where T : BaseEntity
     {
-        Task<T> AddAsync(T entity);
-        Task<T> AddRangeAsync(List<T> entity);
+        Task<bool> AddAsync(T entity);
+        Task<bool> AddRangeAsync(List<T> entity);
         bool Update(T entity);
         bool UpdateRange(List<T> entity);
         bool Remove(T entity);
-        Task<T> RemoveAsync(string id);
+        Task<bool> RemoveAsync(string id);
         bool RemoveRange(List<T> entity);
         Task<int> SaveChange();
     }

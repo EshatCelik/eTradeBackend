@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Application.Repositories.CompletedItem
 {
-    internal interface ICompletedOrderWriteRepository : IWriteRepository<Domain.Entities.CompletedOrder>
+    public interface ICompletedOrderWriteRepository : IWriteRepository<Domain.Entities.CompletedOrder>
     {
     }
 }
