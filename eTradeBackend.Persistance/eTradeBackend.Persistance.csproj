@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\eTradeBackend.Application\eTradeBackend.Application.csproj" />
     <ProjectReference Include="..\eTradeBackend.Domain\eTradeBackend.Domain.csproj" />
+    <ProjectReference Include="..\eTradeBackend.Infrastructure\eTradeBackend.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

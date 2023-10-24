@@ -25,7 +25,7 @@ namespace eTradeBackend.Application.Features.Queries.Order.GetOrderById
             {
                 Id = result.Id,
                 Address = result.Address,
-                BasketItems = result.BasketItem,
+                BasketItems = result.BasketItems,
                 CreatedDate = result.CreateDate,
                 Description = result.Description,
                 OrderCode = result.OrderCode
