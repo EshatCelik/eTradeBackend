@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eTradeBackend.Persistance.Repositories.BasketRepository
 {
-    public class BasketReadRepository : ReadRepository<Basket>, IBasketRepository
+    public class BasketReadRepository : ReadRepository<Basket>, IBasketReadRepository
     {
         public BasketReadRepository(eTradeDbContext eTradeDbContext) : base(eTradeDbContext)
         {
