@@ -45,24 +45,58 @@ namespace eTradeBackend.Persistance.Services
 
         public Basket? GetUserActiveBasket => throw new NotImplementedException();
 
-        public Task AddItemToBAsketAsync(CreateBasketDto baskteItem)
+        public async Task AddItemToBAsketAsync(CreateBasketDto baskteItem)
         {
-            throw new NotImplementedException();
+            Basket? basket = await ContextUser();
+            if (basket != null)
+            {
+                BasketItem currentBasketItem = await _itemReadRepository.GetSingleAsync(x => x.BasketId == basket.Id && x.ProductId == Guid.Parse(baskteItem.ProductId));
+                if (currentBasketItem != null)
+                {
+                    currentBasketItem.Quantity += baskteItem.Quantity;
+                }
+                else
+                {
+                    await _itemWriteRepository.AddAsync(new()
+                    {
+                        BasketId = basket.Id,
+                        ProductId = Guid.Parse(baskteItem.ProductId),
+                        Quantity = baskteItem.Quantity,
+                    });
+                }
+                await _basketWriteRepository.SaveChange();
+            }
         }
 
-        public Task<List<BasketItem>> GetBasketItemsAsync()
+        public async Task<List<BasketItem>> GetBasketItemsAsync()
         {
-            throw new NotImplementedException();
+            Basket? basket = await ContextUser();
+            Basket? result = await _basketReadRepository.Table
+                .Include(x => x.BasketItems)
+                .ThenInclude(x => x.Product)
+                .ThenInclude(x => x.ProductImageFiles)
+                .FirstOrDefaultAsync(y => y.Id == basket.Id);
+            return result != null ? result.BasketItems.ToList() : null;
         }
 
-        public Task RemoveBasketItemAsync(string basketItemId)
+        public async Task RemoveBasketItemAsync(string basketItemId)
         {
-            throw new NotImplementedException();
+            BasketItem item = await _itemReadRepository.GetByIdAsync(basketItemId);
+            if (item != null)
+            {
+                _itemWriteRepository.Remove(item);
+                await _basketWriteRepository.SaveChange();
+            }
         }
 
-        public Task UpdateQuantityAsync(UpdateBasketDto basketItem)
+        public async Task UpdateQuantityAsync(UpdateBasketDto basketItem)
         {
-            throw new NotImplementedException();
+            BasketItem item = await _itemReadRepository.GetByIdAsync(basketItem.BasketItemId);
+            if (item != null)
+            {
+                item.Quantity = basketItem.Quantity;
+                await _basketWriteRepository.SaveChange();
+            }
         }
 
         private async Task<Basket?> ContextUser()
@@ -71,9 +105,9 @@ namespace eTradeBackend.Persistance.Services
 
             if (!string.IsNullOrEmpty(userName))
             {
-                AppUser? user=await _userManager.Users
-                    .Include(x=>x.Baskets)
-                    .FirstOrDefaultAsync(x=>x.UserName == userName);
+                AppUser? user = await _userManager.Users
+                    .Include(x => x.Baskets)
+                    .FirstOrDefaultAsync(x => x.UserName == userName);
 
                 var _basket = from basket in user?.Baskets
                               join order in _orderReadRepository.Table
@@ -86,7 +120,7 @@ namespace eTradeBackend.Persistance.Services
                               };
 
                 Basket? targetBasket = null;
-                if (_basket.Any(x=>x.Order is null))
+                if (_basket.Any(x => x.Order is null))
                 {
                     targetBasket = _basket.FirstOrDefault(x => x.Order is null)?.Basket;
                 }
