@@ -8,6 +8,6 @@ namespace eTradeBackend.Application.Services
 {
     public interface IQRCodeService
     {
-        byte[] GetQRCode(string text);
+        byte[] GenerateQRCodeAsync(string text);
     }
 }
